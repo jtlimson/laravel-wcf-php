@@ -1,0 +1,44 @@
+.status_0:after {
+    content: 'empty';
+}
+
+.status_1:after {
+    content: 'ready';
+}
+
+.status_2:after {
+    content: 'queued';
+}
+
+.status_3:after {
+    content: 'sent';
+}
+
+.status_4:after {
+    content: 'lock';
+}
+
+body {
+    background-image: url(/emt/public/images/whiteBG.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input[type=text] ,input[type=password]{
+    width: 350px;
+    height: 27px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom:2px;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px;
+}
