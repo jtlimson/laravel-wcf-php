@@ -30,3 +30,5 @@ Route::get('/GetStagingDirectories', 'EfilingController@GetStagingDirectories')-
 Route::get('/GetStagingFiles/{pin}', 'EfilingController@GetStagingFiles')->name('GetStagingFiles');
 
 Route::get('/GetFiles', 'EfilingController@GetFiles')->name('GetFiles');
+
+Route::get('/GetFiles/{pin}', 'EfilingController@GetFiles')->name('GetFiles');

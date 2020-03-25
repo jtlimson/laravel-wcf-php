@@ -24,8 +24,7 @@ class EfilingController extends Controller
     } 
 
     public function PostCreateStagingDirectory(Request $request)
-    {
-     
+    {     
         $client = new Efiling();
         $branch = "01";
         $result = $client->CreateStagingDirectory($request->pin, $branch);       
@@ -60,7 +59,11 @@ class EfilingController extends Controller
 
     public function GetFiles(Request $request) 
     {
-        return null; // view
+        $client = new Efiling();
+        $branch = "01";
+        $result = $client->GetFiles($request->pin, $branch);
+        dd($result);
+        return $result; // view
     }
 
     /**

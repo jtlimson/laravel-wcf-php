@@ -27,17 +27,34 @@
                     <br />
                     <br />
                     <br />
-                    <ul>
                    
-                    @forelse ($data as $folder)
-                        <?php $pin = explode('\\',$folder); ?>                                    
-                        <li>
-                            <a href="{{ route('GetStagingFiles', ['pin' => $pin[count($pin)-1] ])}}" > {!! $pin[count($pin)-1] !!} </a>
-                        </li>                      
-                    @empty
-                            <p>no folder</p>
-                    @endforelse
-                    </ul>
+                   
+                    <table class="table"> 
+                        <thead>
+                            <tr>
+                                <td>Folder Name</td>
+                                <td>Action</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @forelse ($data as $folder)
+                        <?php $pin = explode('\\',$folder); ?>               
+                            <tr>
+                                <td><a href="{{ route('GetStagingFiles', ['pin' => $pin[count($pin)-1] ])}}" > {!! $pin[count($pin)-1] !!} </a></td>
+                                <td>
+                                <a href="{{ route('DeleteStagingDirectory', ['pin' => $pin[count($pin)-1]]) }}" > Delete </a>
+                                 </td>
+                            </tr>
+                        @empty
+                            <tr>
+                                <td col-span="2">
+                                    <p>no files</p>
+                                </td>
+                            </tr>               
+                        @endforelse   
+                        </tbody>
+                    </table>
+
                     
                 </div>
             </div>

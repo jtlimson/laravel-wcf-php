@@ -123,11 +123,9 @@ class Efiling {
         }
         else 
         {            
-            $is_array = $soap->GetFilesResult->string ;
+            $is_array = $soap->GetFilesResult ;
         }
         return (array)$is_array; //returns Obj
-
-       
     }
 
 }
