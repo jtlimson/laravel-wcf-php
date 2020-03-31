@@ -771,7 +771,7 @@
                 "symfony/console": "^5.0",
                 "symfony/error-handler": "^5.0",
                 "symfony/finder": "^5.0",
-                "symfony/http-foundation": "^5.0",
+                "symfony/http-foundation": "^5.0.7",
                 "symfony/http-kernel": "^5.0",
                 "symfony/mime": "^5.0",
                 "symfony/process": "^5.0",
@@ -2430,7 +2430,7 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v5.0.5",
+            "version": "v5.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
